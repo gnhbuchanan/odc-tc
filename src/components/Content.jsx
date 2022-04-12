@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import './styles/content.css'
 
 const Content = () => {
 
 
     return (
-        <>
-         <div>Content</div>
-        </>
+    <section id="content" className='section-wrapper'>
+
+
+    </section>
     )
 
 }
