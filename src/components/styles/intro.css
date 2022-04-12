@@ -59,12 +59,13 @@ h1 {
     align-items: center;
     padding: 10px;
     background-color: white;
+    color: blue;
     margin-top: 30px;
 }
 
-#learn-more > h4 {
+/* #learn-more > h4 {
     color: blue;
-}
+} */
 
 #double-caret {
     height: 100%;
