@@ -18,10 +18,10 @@ const Intro = () => {
 
                 <div id="subhead-content-container">
                     <p>Women have played a vital role in the field of computer science, developing some of the most essential components of modern IT. Just a few of the achievements women have made include creating the first computer program and advancing human space exploration. Take a deeper dive into some of these contributions below.</p>
-                    <div id="learn-more">
+                    <button id="learn-more">
                         <h4>Learn More</h4>
                         <img id="double-caret" src={doubleCaret} alt={'double-caret'}/>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>

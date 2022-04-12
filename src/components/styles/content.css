@@ -1,0 +1,34 @@
+#content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.innovator-card {
+    width: 738px;
+    height: 444px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+}
+
+#innovator-port {
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+}
+
+#innovator-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 20px;
+}
+
+#innovator-info > h2,h4 {
+    color: blue
+}
