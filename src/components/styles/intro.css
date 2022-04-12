@@ -1,0 +1,21 @@
+#intro {
+    background-color: #0000FF;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#intro > *{
+    border: 1px solid black;
+}
+
+#headline-container {
+    height: 60%;
+}
+
+#subhead-container {
+    height: 40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
