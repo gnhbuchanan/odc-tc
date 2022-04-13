@@ -3,8 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
-    padding-right: 80px;
+    margin-bottom: 30px;
 }
 
 #content-wrapper {
@@ -93,3 +92,45 @@ select {
     font-size: 14px;
 }
 
+@media only screen and (max-width: 800px) {
+
+    #innovator-port-wrapper {
+        height: 443px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #innovator-info > h3 {
+        margin-top: 20px;
+    }
+
+    #innovator-info {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .innovator-card {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .innovator-card-wrapper {
+        margin-top: 38px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    #content-wrapper {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    #content-wrapper {
+        min-width: 600px;
+    }
+
+}

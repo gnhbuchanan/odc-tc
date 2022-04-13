@@ -23,7 +23,8 @@
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    min-height: 550px;
+    /* min-height: 650px; */
+    min-height: 800px;
     width: 100%;
     height: 100vh;
 }
@@ -53,14 +54,15 @@ h1, p {
 }
 
 p {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: clamp(18px, 1.5vw, 26px);
 }
 
 h1 {
     position: absolute;
     bottom: 0;
     padding-bottom: 3%;
-    font-size: 90px;
+    font-size: clamp(45px, 7vw, 124px);
     width: 80%;
 }
 
@@ -112,4 +114,24 @@ h1 {
 
 #double-caret {
     height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+
+#subhead-content-container {
+    width: 65%;
+}
+
+#headline-container {
+    height: 50%;
+}
+
+#subhead-container {
+    height: 50%;
+}
+
+#intro {
+    min-height: 850px;
+}
+
 }

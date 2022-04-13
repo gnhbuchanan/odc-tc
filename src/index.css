@@ -53,8 +53,6 @@ code {
 }
 
 .section-wrapper {
-  /* width: 100vw;
-  height: 100vh; */
   padding-left: 80px;
   padding-right: 80px;
 }
@@ -65,4 +63,22 @@ button {
   border: none;
   font: inherit;
   cursor: pointer;
+}
+
+#PNF {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .section-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
 }

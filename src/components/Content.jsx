@@ -68,7 +68,7 @@ const Content = () => {
     }
 
     return (
-    <section id="content">
+    <section id="content" className="section-wrapper">
         {
           hasLoaded ?
           <div id="content-wrapper">
