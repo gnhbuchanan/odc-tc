@@ -73,7 +73,7 @@ const Content = () => {
           hasLoaded ?
           <div id="content-wrapper">
           <label htmlFor='innovator-list'>SELECT AN INNOVATOR...</label>
-          <select id="innovator-list" name="innovator-list" aria-labelledby="innovator list" onChange={handleSelect}>
+          <select id="innovator-list"  name="innovator-list"  onChange={handleSelect}>
             {
               innovators.map((el) => {
                   return <option key={el.id} id={el.id} value={el.id}>{el.name}  <Caret /></option>
@@ -81,14 +81,14 @@ const Content = () => {
             }
           </select>
 
-            <button className="innovator-card-wrapper" arai-labeledby="open innovator link"
+            <button className="innovator-card-wrapper" aria-label="open innovator wiki page in a separate window"
             onMouseEnter={interactions.mouseOn.bind(interactions)}
             onMouseLeave={interactions.mouseOff.bind(interactions)}
-            onFocus={interactions.mouseOn.bind(interactions)}
+            onFocus={interactions.mouseOn.bind(interactions)}           
             onBlur={interactions.mouseOff.bind(interactions)}
             onClick={()=>{window.open(`${selected.url}`)}}
             >
-            <div className="innovator-card" >
+            <div className="innovator-card">
                 <div className="innovator-port-wrapper" >
                 <img className="innovator-port" alt={selected.altText} src={require(`../assets/images/${selected.image}`)}  />
                 </div>
@@ -106,4 +106,4 @@ const Content = () => {
     )
 }
 
-export default Content
+export default Content      
