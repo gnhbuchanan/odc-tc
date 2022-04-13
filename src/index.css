@@ -1,3 +1,22 @@
+@font-face {
+  font-family: groteskScreen;
+  src: url(/src/assets/webfonts/Px-Grotesk-Screen/Px-Grotesk-Screen.woff)
+}
+
+@font-face {
+  font-family: grotesk;
+  src: url(/src/assets/webfonts/Px-Grotesk-Bold/Px-Grotesk-Bold.woff);
+  font-style: bold;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: groteskRegular;
+  src: url(/src/assets/webfonts/Px-Grotesk-Bold/Px-Grotesk-Bold.woff);
+  font-style: regular;
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -34,8 +53,8 @@ code {
 }
 
 .section-wrapper {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   padding-left: 80px;
   padding-right: 80px;
 }

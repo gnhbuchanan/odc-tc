@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import './styles/intro.css'
 import {gsap} from "gsap"
 import {ScrollToPlugin} from "gsap/ScrollToPlugin"
@@ -8,6 +8,21 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const Intro = () => {
 
+    const stageBuild = () => {
+        const ease = 'Power1.easeOut'
+        const duration = 1
+        const autoAlpha = 0
+
+        const tl = gsap.timeline({delay: .5})
+        tl.from('#asterisk', {ease, duration, autoAlpha, rotation: '-360deg'}, 0)
+        tl.from('#headline-container', {ease, duration, autoAlpha, x: -20}, 0)
+        tl.from('#accent-line', {ease, duration, width: "0%"}, .25)
+        tl.from('#subhead-content, #learn-more', {ease, duration, autoAlpha, y: -10, stagger: .25}, .5)
+    }
+
+    useEffect(()=>{
+        stageBuild()
+    }, [])
 
     const interactions ={
         settings: {
@@ -26,7 +41,6 @@ const Intro = () => {
             }
         },
         pageScroll(){
-            console.log(interactions)
             const duration = this.settings.scrollDur
             const ease = this.settings.ease
             gsap.to(window, {duration, ease, scrollTo: {y: "#content"}})
@@ -40,7 +54,7 @@ const Intro = () => {
 
             gsap.to('#learn-more', {duration, ease, backgroundColor: boxColor, border})
             gsap.to('#lm', {duration, ease, color: textColor})
-            gsap.to('#test', {duration, ease, fill: textColor})
+            gsap.to('.double-caret-svg', {duration, ease, fill: textColor})
         },
         mouseOff(){
 
@@ -52,7 +66,7 @@ const Intro = () => {
 
             gsap.to('#learn-more', {duration, ease, backgroundColor: boxColor, border})
             gsap.to('#lm', {duration, ease, color: textColor})
-            gsap.to('#test', {duration, ease, fill: textColor})
+            gsap.to('.double-caret-svg', {duration, ease, fill: textColor})
 
         }
     }
@@ -60,7 +74,8 @@ const Intro = () => {
     return (
         <section id="intro" className='section-wrapper'>
             <div id="headline-container">
-                <h1>Women Innovators in Computer Science</h1>
+                <h1>Women <span id="accent-text">Innovators</span><br /> in Computer Science</h1>
+                <div id="accent-line"/>
             </div>
             <div id="subhead-container">
                 <div id="asterisk-container">
@@ -68,13 +83,15 @@ const Intro = () => {
                 </div>
 
                 <div id="subhead-content-container">
-                    <p>Women have played a vital role in the field of computer science, developing some of the most essential components of modern IT. Just a few of the achievements women have made include creating the first computer program and advancing human space exploration. Take a deeper dive into some of these contributions below.</p>
+                    <p id="subhead-content">Women have played a vital role in the field of computer science, developing some of the most essential components of modern IT. Just a few of the achievements women have made include creating the first computer program and advancing human space exploration. Take a deeper dive into some of these contributions below.</p>
                     <button id="learn-more"
                      onClick={interactions.pageScroll.bind(interactions)}
                      onMouseEnter={interactions.mouseOn.bind(interactions)}
                      onMouseLeave={interactions.mouseOff.bind(interactions)}
+                     onFocus={interactions.mouseOn.bind(interactions)}
+                     onBlur={interactions.mouseOff.bind(interactions)}
                     >
-                        <h4 id="lm">Learn More</h4>
+                        <h2 id="lm">Learn More</h2>
                         <DoubleCaret />
                     </button>
                 </div>
@@ -84,4 +101,4 @@ const Intro = () => {
 
 }
 
-export default Intro
+export default Intro    
