@@ -53,7 +53,7 @@ const Intro = () => {
             const border = this.settings.borders.invert
 
             gsap.to('#learn-more', {duration, ease, backgroundColor: boxColor, border})
-            gsap.to('#lm', {duration, ease, color: textColor})
+            gsap.to('#lm-text', {duration, ease, color: textColor})
             gsap.to('.double-caret-svg', {duration, ease, fill: textColor})
         },
         mouseOff(){
@@ -65,7 +65,7 @@ const Intro = () => {
             const border = this.settings.borders.default
 
             gsap.to('#learn-more', {duration, ease, backgroundColor: boxColor, border})
-            gsap.to('#lm', {duration, ease, color: textColor})
+            gsap.to('#lm-text', {duration, ease, color: textColor})
             gsap.to('.double-caret-svg', {duration, ease, fill: textColor})
 
         }
@@ -91,7 +91,7 @@ const Intro = () => {
                      onFocus={interactions.mouseOn.bind(interactions)}
                      onBlur={interactions.mouseOff.bind(interactions)}
                     >
-                        <h2 id="lm">Learn More</h2>
+                        <h2 id="lm-text">Learn More</h2>
                         <DoubleCaret />
                     </button>
                 </div>

@@ -44,7 +44,7 @@ h1 {
     width: 80%;
 }
 
-#lm {
+#lm-text {
     font-size: 14px;
     font-family: groteskScreen;
     line-height: 0;
@@ -104,18 +104,6 @@ h1 {
     height: 50%;
 }
 
-/* #intro {
-    min-height: 650px;
-} */
-
-}
-
-@media only screen and (max-height: 500px) {
-
-    /* #intro {
-        min-height: 650px;
-    } */
-    
 }
 
 @media only screen and (min-width: 1600px) {

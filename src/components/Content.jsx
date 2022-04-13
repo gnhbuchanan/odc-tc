@@ -51,7 +51,7 @@ const Content = () => {
 
             gsap.to('.innovator-card', {duration, ease, backgroundColor: boxColor})
             gsap.to('.inovator-info-text', {duration, ease, color: textColor})
-            gsap.to('#innovator-port', {duration, ease, scale: 1.1})
+            gsap.to('.innovator-port', {duration, ease, scale: 1.1})
         },
         mouseOff(){
 
@@ -62,7 +62,7 @@ const Content = () => {
 
             gsap.to('.innovator-card', {duration, ease, backgroundColor: boxColor})
             gsap.to('.inovator-info-text', {duration, ease, color: textColor})
-            gsap.to('#innovator-port', {duration, ease, scale: 1})
+            gsap.to('.innovator-port', {duration, ease, scale: 1})
 
         }
     }
@@ -89,10 +89,10 @@ const Content = () => {
             onClick={()=>{window.open(`${selected.url}`)}}
             >
             <div className="innovator-card" >
-                <div id="innovator-port-wrapper" >
-                <img id="innovator-port" alt={selected.altText} src={require(`../assets/images/${selected.image}`)}  />
+                <div className="innovator-port-wrapper" >
+                <img className="innovator-port" alt={selected.altText} src={require(`../assets/images/${selected.image}`)}  />
                 </div>
-                <div id="innovator-info">
+                <div className="innovator-info">
                     <h2 className="inovator-info-text">{selected.name}</h2>
                     <h3 className="inovator-info-text">{selected.description}</h3>
                 </div>

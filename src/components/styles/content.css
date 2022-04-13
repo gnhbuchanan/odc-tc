@@ -27,13 +27,13 @@
     flex-direction: row;
 }
 
-#innovator-port-wrapper {
+.innovator-port-wrapper {
     height: 100%;
     width: 50%;
     overflow: hidden;
 }
 
-#innovator-port {
+.innovator-port {
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -41,7 +41,7 @@
     object-fit: cover;
 }
 
-#innovator-info {
+.innovator-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,11 +52,11 @@
     font-family: groteskRegular;
 }
 
-#innovator-info > h2 {
+.innovator-info > h2 {
     font-size: 26px;
 }
 
-#innovator-info > h3 {
+.innovator-info > h3 {
     font-size: 18px;
 }
 
@@ -97,17 +97,17 @@ select {
 
 @media only screen and (max-width: 800px) {
 
-    #innovator-port-wrapper {
+    .innovator-port-wrapper {
         height: 443px;
         width: 100%;
         overflow: hidden;
     }
 
-    #innovator-info > h3 {
+    .innovator-info > h3 {
         margin-top: 20px;
     }
 
-    #innovator-info {
+    .innovator-info {
         margin-top: 20px;
         width: 100%;
     }
