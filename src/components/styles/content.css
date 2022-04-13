@@ -38,6 +38,7 @@
     width: 100%;
     background-size: cover;
     background-position: center center;
+    object-fit: cover;
 }
 
 #innovator-info {
@@ -86,6 +87,8 @@ select {
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: 50%;
+    border-color: blue;;
+    border-style: solid;
     color: blue;
     background-color: white;
     font-family: groteskScreen;

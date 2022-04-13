@@ -26,7 +26,7 @@ const Intro = () => {
 
     const interactions ={
         settings: {
-            scrollDur: 1,
+            scrollDur: .7,
             hoverDur: .5,
             ease: 'Power2.easeOut',
             colors: {
@@ -78,13 +78,13 @@ const Intro = () => {
                 <div id="accent-line"/>
             </div>
             <div id="subhead-container">
-                <div id="asterisk-container">
+                <div id="asterisk-container">   
                     <img id="asterisk" src={asterisk} alt={'asterisk'}/>
                 </div>
 
                 <div id="subhead-content-container">
                     <p id="subhead-content">Women have played a vital role in the field of computer science, developing some of the most essential components of modern IT. Just a few of the achievements women have made include creating the first computer program and advancing human space exploration. Take a deeper dive into some of these contributions below.</p>
-                    <button id="learn-more"
+                    <button id="learn-more" aria-label="learn more"
                      onClick={interactions.pageScroll.bind(interactions)}
                      onMouseEnter={interactions.mouseOn.bind(interactions)}
                      onMouseLeave={interactions.mouseOff.bind(interactions)}

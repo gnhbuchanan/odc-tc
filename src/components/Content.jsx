@@ -32,7 +32,7 @@ const Content = () => {
         setSelected(selectedInnovator)
     }
 
-    const interactions ={
+    const interactions = {
         settings: {
             duration: .5,
             ease: 'Power2.easeOut',
@@ -73,7 +73,7 @@ const Content = () => {
           hasLoaded ?
           <div id="content-wrapper">
           <label htmlFor='innovator-list'>SELECT AN INNOVATOR...</label>
-          <select id="innovator-list" name="innovator-list" onChange={handleSelect}>
+          <select id="innovator-list" name="innovator-list" aria-labelledby="innovator list" onChange={handleSelect}>
             {
               innovators.map((el) => {
                   return <option key={el.id} id={el.id} value={el.id}>{el.name}  <Caret /></option>
@@ -81,18 +81,16 @@ const Content = () => {
             }
           </select>
 
-            <button className="innovator-card-wrapper"
+            <button className="innovator-card-wrapper" arai-labeledby="open innovator link"
             onMouseEnter={interactions.mouseOn.bind(interactions)}
             onMouseLeave={interactions.mouseOff.bind(interactions)}
             onFocus={interactions.mouseOn.bind(interactions)}
             onBlur={interactions.mouseOff.bind(interactions)}
             onClick={()=>{window.open(`${selected.url}`)}}
             >
-            <div className="innovator-card" onClick={() => {console.log(selected)}}>
-                {/* <img id="innovator-port" alt={selected.altText} src={require(`../assets/images/${selected.image}`)}  /> */}
-
+            <div className="innovator-card" >
                 <div id="innovator-port-wrapper" >
-                <div id="innovator-port" alt={selected.altText} style={{backgroundImage: `url("/images/${selected.image}")`}}  />
+                <img id="innovator-port" alt={selected.altText} src={require(`../assets/images/${selected.image}`)}  />
                 </div>
                 <div id="innovator-info">
                     <h2 className="inovator-info-text">{selected.name}</h2>
