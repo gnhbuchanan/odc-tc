@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './styles/content.css'
 import {gsap} from "gsap"
 import {data} from '../assets/data2'
-import { Caret } from "../assets/svg/reactComponentSVG/caret";
 
 const Content = () => {
 
@@ -76,7 +75,7 @@ const Content = () => {
           <select id="innovator-list"  name="innovator-list"  onChange={handleSelect}>
             {
               innovators.map((el) => {
-                  return <option key={el.id} id={el.id} value={el.id}>{el.name}  <Caret /></option>
+                  return <option key={el.id} id={el.id} value={el.id}>{el.name}</option>
               })  
             }
           </select>
